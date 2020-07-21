@@ -1,42 +1,50 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <TodoList />
+  </div>
 </template>
 
 <script>
+import TodoList from "./components/TodoList";
+
 export default {
   name: "App",
-  data() {
-    return {
-      todos: [
-        {
-          id: 1,
-          title: "Go workout",
-          completed: false,
-        },
-        {
-          id: 2,
-          title: "Do laundry",
-          completed: false,
-        },
-        {
-          id: 3,
-          title: "Cook food",
-          completed: false,
-        },
-        {
-          id: 4,
-          title: "Clean up room",
-          completed: false,
-        },
-        {
-          id: 5,
-          title: "Finish work",
-          completed: false,
-        },
-      ],
-    };
+  components: {
+    TodoList,
   },
 };
 </script>
 
-<style></style>
+<style>
+* {
+  box-sizing: border-box;
+  font-size: 1em;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #1f1f1f;
+  color: hsla(0, 0%, 100%, 0.87);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#app {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+</style>
